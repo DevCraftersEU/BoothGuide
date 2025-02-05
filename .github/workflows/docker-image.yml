@@ -1,0 +1,29 @@
+# Test if the current master is buildable to prepare for releases
+name: Build Docker Images
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Frontend Docker image
+      working-directory: ./Frontend
+      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Backend Docker image
+      working-directory: ./Backend
+      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)
+  build-webserver:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Backend Docker image
+      working-directory: ./Backend
+      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)

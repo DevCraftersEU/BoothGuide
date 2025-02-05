@@ -1,0 +1,100 @@
+general:
+  search: Search
+  save: Save
+  exhibitor: Exhibitor | Exhibitors
+  more-info: More Info
+  close: Close
+  overview: Overview
+  favorites: Favorites
+  administration: Administration
+  reset-app: Reset Application
+  install: Install
+  design: Design
+  username: Username
+  password: Password
+  passwordRepeat: Repeat password
+  login: Login
+  please-wait: Please wait...
+  button: Button
+  offer: Offer | Offers
+  type: Type
+  location: Location
+  action: Action | Actions
+  reset: Reset
+  import: Import
+  accounts: Accounts
+  id: ID
+  role: Role | Roles
+
+
+admin:
+  login-message: Please log in
+  login-description: To manage the application, you must first log in
+  login-error-message: Unfortunately, that didn't work. Please try again.
+  data-import: Import data
+  data-export: Export data
+  add-exhibitor: Add new exhibitor
+  add-user: Add new user
+  count-of-exhibitors: The following {count} exhibitors are currently stored
+  no-exhibitors-exists-message: There are currently no exhibitors. Please add new ones.
+  default-message-select-option: Select one of the options in the navigation bar at the bottom of the page.
+  no-roles-exists-error: No roles have been assigned to this account yet. Please contact an application administrator.
+
+welcome-screen:
+  message: Welcome
+  loading: We are loading the data. Please wait...
+  reset: The application is being reset...
+
+exhibitor-overview:
+  heading: Exhibitor Overview
+  types-of-apprenticeships: Types of Apprenticeships
+  search-info-suffix: matches the search criteria | match the search criteria
+
+exhibitor-details:
+  message-given-options: The following options are offered by {ex} {exRoom}
+
+exhibitor-create:
+  title: Add Exhibitor
+  subtitle: Please provide all information
+  name-of-exhibitor: Name of Exhibitor
+  location-of-exhibitor: Location of Exhibitor
+  message-offers: The exhibitor offers the following
+  placeholder-type: Offer type
+  placeholder-offer: Add offer...
+  exhibitor-creation-process: Creating exhibitor...
+
+menu:
+  overview: View all exhibitors
+  favorites: View only your favorites
+  administration: Manage the application
+  reset: Settings, favorites, etc.
+  install: Use directly as an app
+
+install-dialog:
+  ios:
+    1: Tap the Share icon
+    2: and select "Add to Home Screen". Please note that this currently only works in Safari and Chrome.
+  android:
+    1: Tap the Menu icon
+    2: and select "Add to Home Screen".
+  pclaptop:
+    1: Tap the Install icon
+    2: (Chrome) or
+    3: (Edge) in the address bar to install the application. Unfortunately, there is no way to install the application in Firefox.
+
+import-dialog:
+  heading: Import exhibitors
+  placeholder-import-field: File to import (*.json)
+  details-button: Detailed infos
+  loading-data: Loading data. Please wait...
+  importing-data: Importing data. Please wait...
+  import-analysed-message: No items can be imported | One item can be imported | {count} items can be imported
+  delete-existing-data: Delete existing data
+  error-parsing-json: Could not parse JSON file
+  error-no-array: JSON is not an array of objects!
+  error-generic: There were errors while importing
+  error-in-item: Error in item
+
+edit-design-screen:
+  heading: Customize Design
+  subheading: Customize the default design to your own preferences

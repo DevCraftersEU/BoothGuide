@@ -1,0 +1,44 @@
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    links:
+      - frontend
+      - backend
+    ports:
+      - "7000:7000"
+  frontend:
+    env_file: .env
+    build:
+      context: Frontend
+      dockerfile: ./dockerfile
+  backend:
+    env_file: .env
+    build:
+      context: Backend
+      dockerfile: ./dockerfile
+    links:
+      - db
+# You only need to mount the images if you want to use the
+# footer together with an image. Be sure to set the right
+# path inside your .env file
+#    volumes:
+#      - /path/to/image-xs.png:/image-xs.png
+#      - /path/to/image-sm.png:/image-sm.png
+#      - /path/to/image-md.png:/image-md.png
+#      - /path/to/image-lg.png:/image-lg.png
+#      - /path/to/image-xl.png:/image-xl.png
+#      - /path/to/image-xxl.png:/image-xxl.png
+  db:
+    image: postgres:16
+    shm_size: 128mb
+    env_file: .env
+    environment:
+      - POSTGRES_PASSWORD=postgres  # Must be the same as in the env file!
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

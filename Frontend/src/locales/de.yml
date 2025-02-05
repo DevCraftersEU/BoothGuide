@@ -1,0 +1,99 @@
+general:
+  search: Suchen
+  save: Speichern
+  exhibitor: Aussteller
+  more-info: Mehr Infos
+  close: Schließen
+  overview: Übersicht
+  favorites: Favoriten
+  administration: Administration
+  reset-app: Anwendung zurücksetzen
+  install: Installieren
+  design: Design
+  username: Nutzername
+  password: Passwort
+  passwordRepeat: Passwort wiederholen
+  login: Anmelden
+  please-wait: Bitte warten...
+  button: Button
+  offer: Angebot | Angebote
+  type: Typ
+  location: Ort
+  action: Aktion | Aktionen
+  reset: Zurücksetzen
+  import: Importieren
+  accounts: Accounts
+  id: ID
+  role: Rolle | Rollen
+
+admin:
+  login-message: Bitte melden Sie sich an
+  login-description: Um die Anwendung zu verwalten, müssen Sie sich zunächst anmelden
+  login-error-message: Das hat leider nicht geklappt. Bitte versuche es erneut.
+  data-import: Daten importieren
+  data-export: Daten exportieren
+  add-exhibitor: Neuen Aussteller hinzufügen
+  add-user: Neuen Account hinzufügen
+  count-of-exhibitors: Die folgenden {count} Aussteller sind zur Zeit gespeichert
+  no-exhibitors-exists-message: Aktuell existieren noch keine Aussteller. Bitte füge neue hinzu.
+  default-message-select-option: Wähle eine der Optionen in der Navigationsleiste am Ende der Seite.
+  no-roles-exists-error: Diesem Account wurden noch keine Rollen zugewiesen. Bitte wende dich an einen Administrator der Anwendung.
+
+welcome-screen:
+  message: Willkommen
+  loading: Wir laden die Daten. Bitte warten ...
+  reset: Die Anwendung wird zurückgesetzt...
+
+exhibitor-overview:
+  heading: Ausstellerübersicht
+  types-of-apprenticeships: Ausbildungsarten
+  search-info-suffix: entspricht den Suchkriterien | entsprechen den Suchkriterien
+
+exhibitor-details:
+  message-given-options: Folgende Möglichkeiten bietet {ex} {exRoom} an
+
+exhibitor-create:
+  title: Aussteller hinzufügen
+  subtitle: Bitte gib alle Informationen an
+  name-of-exhibitor: Name des Ausstellers
+  location-of-exhibitor: Ort des Ausstellers
+  message-offers: Folgendes bietet der Austeller an
+  placeholder-type: Angebotstyp
+  placeholder-offer: Angebot hinzufügen...
+  exhibitor-creation-process: Austeller wird erstellt...
+
+menu:
+  overview: Sieh dir alle Aussteller an
+  favorites: Sieh dir nur deine Favoriten an
+  administration: Verwalte die Anwendung
+  reset: Einstellungen, Favoriten, etc.
+  install: Direkt als App nutzen
+
+install-dialog:
+  ios:
+    1: Drücke auf das Share-Icon
+    2: und wähle "Zum Home-Bildschirm" aus. Bitte beachte, dass das zur Zeit nur unter Safari und Chrome funktioniert.
+  android:
+    1: Drücke auf das Menü-Icon
+    2: und wähle "Zum Startbildschirm hinzufügen".
+  pclaptop:
+    1: Drücke auf das Install-Icon
+    2: (Chrome) bzw.
+    3: (Edge) in der Adresszeile, um die Anwendung zu installieren. In Firefox gibt es leider keine Möglichkeit, die Anwendung zu installieren.
+
+import-dialog:
+  heading: Aussteller importieren
+  placeholder-import-field: Datei zum importieren (*.json)
+  details-button: Details
+  loading-data: Daten werden geladen. Bitte warten...
+  importing-data: Daten werden importiert. Bitte warten...
+  import-analysed-message: Es können keine Elemente importiert werden | Es kann ein Element importiert werden | Es können {count} Elemente importiert werden
+  delete-existing-data: Vorhandene Daten löschen
+  error-parsing-json: JSON Datei konnte nicht geparsed werden
+  error-no-array: Es handelt sich nicht um ein JSON-Array!
+  error-generic: Beim Importieren sind Fehler aufgetreten
+  error-in-item: Fehler im Element
+
+edit-design-screen:
+  heading: Design anpassen
+  subheading: Standarddesign an die eigene Wünsche anpassen

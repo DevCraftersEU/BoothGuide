@@ -1,0 +1,8 @@
+FROM maven:latest AS build-stage
+WORKDIR /app
+COPY src src
+COPY pom.xml pom.xml
+RUN mvn clean install -DskipTests=true
+FROM eclipse-temurin:21 AS production-stage
+COPY --from=build-stage /app/target/*.jar /app.jar
+CMD ["java", "-jar", "/app.jar"]
