@@ -28,6 +28,8 @@ Data is updated when the application is opened again or when manually requested.
 - [ ] 🌎 i18n - currently only english and german
 - [ ] 🔐 Expansion of authentication options (OAuth2 / OIDC)
 
+🖼️ Screenshots can be found in the [Wiki](https://github.com/DevCraftersEU/BoothGuide/wiki/Screenshots) 🖼️
+
 ## 💌 Legal Information
 
 The project may be used for both private and business purposes. However, selling the project or any derivative works is
