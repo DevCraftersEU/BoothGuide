@@ -50,6 +50,9 @@ and [docker compose](https://docs.docker.com/compose/) must be installed.
 4. Run `docker compose up -d`
 5. Open `http://localhost:7000` in the browser
 
+If not set in the .env file, the initial admin password is generated at first startup. Use this command to view the password for the admin user:
+`docker compose logs backend | grep "default password"`   
+
 #### Alternative: Build docker images
 
 1. Clone this repository: `git clone`
