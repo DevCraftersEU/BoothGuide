@@ -28,6 +28,8 @@ Data is updated when the application is opened again or when manually requested.
 - [ ] 🌎 i18n - currently only english and german
 - [ ] 🔐 Expansion of authentication options (OAuth2 / OIDC)
 
+🖼️ Screenshots can be found in the [Wiki](https://github.com/DevCraftersEU/BoothGuide/wiki/Screenshots) 🖼️
+
 ## 💌 Legal Information
 
 The project may be used for both private and business purposes. However, selling the project or any derivative works is
@@ -49,6 +51,9 @@ and [docker compose](https://docs.docker.com/compose/) must be installed.
 3. Modify the values in `.env` and provide all values
 4. Run `docker compose up -d`
 5. Open `http://localhost:7000` in the browser
+
+If not set in the .env file, the initial admin password is generated at first startup. Use this command to view the password for the admin user:
+`docker compose logs backend | grep "default password"`   
 
 #### Alternative: Build docker images
 
