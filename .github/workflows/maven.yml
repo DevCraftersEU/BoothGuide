@@ -45,3 +45,4 @@ jobs:
       uses: advanced-security/maven-dependency-submission-action@49866fead7de0b0083b89f5f653f9620548ccddf
       with:
         directory: Backend
+        ignore-maven-wrapper: true
