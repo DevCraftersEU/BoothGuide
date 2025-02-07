@@ -42,7 +42,6 @@ public class SecurityController {
                 ).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .httpBasic(Customizer.withDefaults());
 
-        //FIXME (test swagger-ui)
         //Safe for stateless REST
         http.csrf(AbstractHttpConfigurer::disable);
         return http.build();
