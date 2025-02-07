@@ -1,7 +1,11 @@
 package com.westers.boothguide.model.dto;
 
 import com.westers.boothguide.model.Exhibitor;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Arrays;
 import java.util.Objects;
