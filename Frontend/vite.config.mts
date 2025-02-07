@@ -121,17 +121,14 @@ export default defineConfig(({}) => {
         '/pub': {
           target: 'http://localhost:8080',
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/pub/, '/pub'),
         },
         '/auth': {
           target: 'http://localhost:8080',
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/auth/, '/auth'),
         },
         '/config': {
           target: 'http://localhost:8080',
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/config/, '/config'),
         },
       },
     },

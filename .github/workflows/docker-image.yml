@@ -4,7 +4,10 @@ name: Build Docker Images
 on:
   push:
     branches: [ "main" ]
-
+    
+permissions:
+  contents: read
+  
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
