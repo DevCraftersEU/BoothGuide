@@ -1,7 +1,7 @@
 {
   "name": "booth-guide-frontend",
   "type": "module",
-  "version": "0.1.1-SNAPSHOT",
+  "version": "0.1.1",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
     "lint": "eslint . --fix --ignore-path .gitignore",
