@@ -2,7 +2,24 @@ package com.westers.boothguide.services.impl;
 
 import com.westers.boothguide.services.ValidationService;
 import jakarta.annotation.PostConstruct;
-import org.passay.*;
+import org.passay.CharacterCharacteristicsRule;
+import org.passay.CharacterRule;
+import org.passay.CzechSequenceData;
+import org.passay.EnglishCharacterData;
+import org.passay.EnglishSequenceData;
+import org.passay.GermanCharacterData;
+import org.passay.GermanSequenceData;
+import org.passay.IllegalSequenceRule;
+import org.passay.LengthRule;
+import org.passay.MessageResolver;
+import org.passay.PasswordData;
+import org.passay.PasswordValidator;
+import org.passay.PolishSequenceData;
+import org.passay.PropertiesMessageResolver;
+import org.passay.RepeatCharactersRule;
+import org.passay.RuleResult;
+import org.passay.UsernameRule;
+import org.passay.WhitespaceRule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -44,7 +61,7 @@ public class ValidationServiceImpl implements ValidationService {
                 new CharacterRule(EnglishCharacterData.Special));
 
         PasswordValidator validator = new PasswordValidator(
-                new LengthRule(8, 4096),
+                new LengthRule(8, 72),
                 new RepeatCharactersRule(3, 3),
                 new UsernameRule(),
                 complexityRule,
