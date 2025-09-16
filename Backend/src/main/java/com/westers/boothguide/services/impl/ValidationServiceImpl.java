@@ -61,7 +61,7 @@ public class ValidationServiceImpl implements ValidationService {
                 new CharacterRule(EnglishCharacterData.Special));
 
         PasswordValidator validator = new PasswordValidator(
-                new LengthRule(8, 4096),
+                new LengthRule(8, 72),
                 new RepeatCharactersRule(3, 3),
                 new UsernameRule(),
                 complexityRule,

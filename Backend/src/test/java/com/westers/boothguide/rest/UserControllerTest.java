@@ -248,7 +248,6 @@ public class UserControllerTest extends AbstractRestTest {
         testCreateUserWithRules(18, List.of(upperCharRule, digitCharRule));
         testCreateUserWithRules(19, List.of(upperCharRule, specialCharRule));
         testCreateUserWithRules(20, List.of(digitCharRule, specialCharRule));
-        testCreateUserWithRules(4096, List.of(digitCharRule, specialCharRule));
     }
 
     private void testCreateUserWithRules(int length, List<CharacterRule> rules) {
@@ -276,6 +275,8 @@ public class UserControllerTest extends AbstractRestTest {
         invalidPasswords.add(passwordGenerator.generatePassword(17, List.of(specialCharRule)));
         invalidPasswords.add(passwordGenerator.generatePassword(18, List.of(digitCharRule)));
         invalidPasswords.add(passwordGenerator.generatePassword(5000, List.of(digitCharRule)));
+        invalidPasswords.add(passwordGenerator.generatePassword(128, List.of(digitCharRule, specialCharRule)));
+
         for (String invalidPassword : invalidPasswords) {
             user.setPassword(invalidPassword);
             var response = authRestTemplate().postForEntity(generateUrl(USERS_PATH), user, String.class);
