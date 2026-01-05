@@ -28,9 +28,20 @@ const { t } = useI18n()
     <v-card
       max-width="600"
       min-width="300"
-      :subtitle="exhibitor?.roomNumber"
       :title="exhibitor?.name"
     >
+      <template #subtitle>
+        {{ exhibitor?.roomNumber }}
+        <span
+          v-if="exhibitor?.httpLink && exhibitor.httpLink.trim().length > 0"
+        >
+          - <a
+            :href="exhibitor.httpLink"
+            rel="noopener"
+            target="_blank"
+          >{{ exhibitor.httpLink }}</a>
+        </span>
+      </template>
       <v-card-text>
         <div
           v-if="exhibitor && exhibitor!.offers && exhibitor!.offers.length > 0 && exhibitor!.offers[0].length>0&& exhibitor!.offers[0][0]!.length>0"

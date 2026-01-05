@@ -26,7 +26,7 @@ public class ExhibitorServiceImpl implements ExhibitorService {
 
     @Override
     public Exhibitor createExhibitor(String name, String offers, String roomNumber) {
-        return exhibitorRepository.save(new Exhibitor(null, name, offers, roomNumber));
+        return exhibitorRepository.save(new Exhibitor(null, name, offers, roomNumber, null));
     }
 
     @Override
@@ -55,6 +55,7 @@ public class ExhibitorServiceImpl implements ExhibitorService {
         ex.setName(exhibitor.getName());
         ex.setOffers(exhibitor.getOffers());
         ex.setRoomNumber(exhibitor.getRoomNumber());
+        ex.setHttpLink(exhibitor.getHttpLink());
         return exhibitorRepository.save(ex);
     }
 

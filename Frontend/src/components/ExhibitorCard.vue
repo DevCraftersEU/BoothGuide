@@ -1,12 +1,12 @@
 <script setup lang="ts">
 
-import { IExhibitor } from '@/model/models'
-import { useI18n } from 'vue-i18n'
+import {IExhibitor} from '@/model/models'
+import {useI18n} from 'vue-i18n'
 
 defineProps<{ exhibitor: IExhibitor, favorite: boolean }>()
 const emit = defineEmits(['favoriteUpdated', 'showMoreInfo', 'updateFavorite'])
 
-const { t } = useI18n()
+const {t} = useI18n()
 </script>
 
 <template>
@@ -15,7 +15,23 @@ const { t } = useI18n()
     class="ma-2"
   >
     <v-card-title>
-      {{ exhibitor.name }}
+      <div style="display: flex; align-items: center">
+        {{ exhibitor.name }}
+        <a
+          v-if="exhibitor.httpLink && exhibitor.httpLink.trim().length > 0"
+          :href="exhibitor.httpLink"
+          class="ml-2"
+          rel="noopener"
+          target="_blank"
+          :title="t('general.open-link')"
+          style="font-size: smaller; text-decoration: none"
+        >
+          | <v-icon
+            icon="mdi-open-in-new"
+            size="x-small"
+          />
+        </a>
+      </div>
       <div
         v-if="exhibitor.roomNumber && exhibitor.roomNumber.trim().length > 0"
         style="font-size: small"

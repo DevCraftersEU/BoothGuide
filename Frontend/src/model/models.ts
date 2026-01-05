@@ -3,6 +3,7 @@ export interface IExhibitor {
   name: string,
   offers: Array<Array<string|undefined>>,
   roomNumber: string | undefined,
+  httpLink?: string | undefined,
 }
 
 export interface ISimplifiedDesign {
@@ -32,6 +33,7 @@ export const exhibitorSchema = {
       },
     },
     roomNumber: { type: 'string' },
+    httpLink: { type: 'string' },
   },
   required: ['id', 'name', 'offers', 'roomNumber'],
 }
