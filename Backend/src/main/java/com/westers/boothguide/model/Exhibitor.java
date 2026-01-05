@@ -31,11 +31,14 @@ public class Exhibitor {
     @Column(columnDefinition = "text")
     private String offers;
     private String roomNumber;
+    @Column(name = "http_link")
+    private String httpLink;
 
     public Exhibitor(ExhibitorDTO dto) {
         this.id = dto.getId();
         this.name = dto.getName();
         this.roomNumber = dto.getRoomNumber();
+        this.httpLink = dto.getHttpLink();
         this.offers = Arrays.stream(dto.getOffers()).map(item -> Arrays.stream(item).map(o -> o.replace(",", "\\,")).toArray(String[]::new)).map(i -> String.join(",", i)).collect(Collectors.joining(";"));
     }
 }

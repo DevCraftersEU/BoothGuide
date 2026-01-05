@@ -40,7 +40,7 @@ public class ExhibitorControllerTest extends AbstractRestTest {
     }
 
     private ExhibitorDTO generateRandomDTO() {
-        Exhibitor exhibitor = new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(2), UUID.randomUUID().toString());
+        Exhibitor exhibitor = new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(2), UUID.randomUUID().toString(), "https://example.com/" + UUID.randomUUID());
         return new ExhibitorDTO(exhibitor);
     }
 
@@ -68,9 +68,9 @@ public class ExhibitorControllerTest extends AbstractRestTest {
         List<Exhibitor> exhibitorsRound3 = new ArrayList<>();
         int countOfExhibitors = 20;
         for (int i = 0; i < countOfExhibitors; i++) {
-            exhibitorsRound1.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString()));
-            exhibitorsRound2.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString()));
-            exhibitorsRound3.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString()));
+            exhibitorsRound1.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString(), "https://example.com/round1/" + UUID.randomUUID()));
+            exhibitorsRound2.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString(), "https://example.com/round2/" + UUID.randomUUID()));
+            exhibitorsRound3.add(new Exhibitor(null, UUID.randomUUID().toString(), generateRandomOffers(3), UUID.randomUUID().toString(), "https://example.com/round3/" + UUID.randomUUID()));
         }
         checkRemoteCountOfExhibitors(0, Collections.emptyList());
         var postResponse = authRestTemplate().postForEntity(generateUrl("/auth/exhibitors/import/true"), exhibitorsRound1.stream().map(ExhibitorDTO::new).toList(), ExhibitorDTO[].class);
@@ -111,6 +111,7 @@ public class ExhibitorControllerTest extends AbstractRestTest {
         persistedEntity.setName("CHANGED");
         persistedEntity.setOffers(new String[0][]);
         persistedEntity.setRoomNumber("CHANGED");
+        persistedEntity.setHttpLink("https://example.com/changed");
         var putResponse = authRestTemplate().exchange(generateUrl("/auth/exhibitors"), HttpMethod.PUT, new HttpEntity<>(persistedEntity), ExhibitorDTO.class);
         assertTrue(putResponse.getStatusCode().is2xxSuccessful());
         assertEquals(persistedEntity, putResponse.getBody());

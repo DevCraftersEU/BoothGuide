@@ -21,11 +21,13 @@ public class ExhibitorDTO {
     private String name;
     private String[][] offers;
     private String roomNumber;
+    private String httpLink;
 
     public ExhibitorDTO(Exhibitor exhibitor) {
         this.id = exhibitor.getId();
         this.name = exhibitor.getName();
         this.roomNumber = exhibitor.getRoomNumber();
+        this.httpLink = exhibitor.getHttpLink();
         if (exhibitor.getOffers().isBlank())
             this.offers = new String[0][0];
         else
@@ -56,13 +58,13 @@ public class ExhibitorDTO {
             }
         }
         if (ignoreID)
-            return Objects.equals(name, dto.name) && Objects.equals(roomNumber, dto.roomNumber);
-        return Objects.equals(id, dto.id) && Objects.equals(name, dto.name) && Objects.equals(roomNumber, dto.roomNumber);
+            return Objects.equals(name, dto.name) && Objects.equals(roomNumber, dto.roomNumber) && Objects.equals(httpLink, dto.httpLink);
+        return Objects.equals(id, dto.id) && Objects.equals(name, dto.name) && Objects.equals(roomNumber, dto.roomNumber) && Objects.equals(httpLink, dto.httpLink);
     }
 
     @Override
     public int hashCode() {
         var offersToHash = Arrays.stream(this.offers).map(i -> String.join(",", i)).collect(Collectors.joining(";"));
-        return Objects.hash(id, name, offersToHash, roomNumber);
+        return Objects.hash(id, name, offersToHash, roomNumber, httpLink);
     }
 }
