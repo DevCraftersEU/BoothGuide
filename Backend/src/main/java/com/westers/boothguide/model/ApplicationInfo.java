@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,7 +20,8 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class ApplicationInfo {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "application_info_seq")
+    @SequenceGenerator(name = "application_info_seq", sequenceName = "application_info_seq", allocationSize = 1)
     private Long id;
     @Column(nullable = false)
     private String infoName;
