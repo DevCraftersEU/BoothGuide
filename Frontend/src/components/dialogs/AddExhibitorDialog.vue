@@ -12,6 +12,7 @@ const exhibitorToCreate: Ref<IExhibitor> = ref({
   name: '',
   offers: [],
   roomNumber: '',
+  httpLink: '',
 })
 
 const model = defineModel<boolean>({ default: false })
@@ -70,6 +71,7 @@ function resetExhibitorToCreate () {
     name: '',
     offers: [],
     roomNumber: '',
+    httpLink: '',
   }
   currentFocusedOfferType.value = undefined
   currentFocusedOfferIndex.value = 0
@@ -138,6 +140,11 @@ const autoFillOffers = computed(() => {
           <v-text-field
             v-model="exhibitorToCreate.roomNumber"
             :label="t('exhibitor-create.location-of-exhibitor')"
+            variant="outlined"
+          />
+          <v-text-field
+            v-model="exhibitorToCreate.httpLink"
+            :label="t('exhibitor-create.http-link')"
             variant="outlined"
           />
           <div style="display: flex; justify-content: space-around">
