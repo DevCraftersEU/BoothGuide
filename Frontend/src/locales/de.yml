@@ -3,6 +3,7 @@ general:
   save: Speichern
   exhibitor: Aussteller
   more-info: Mehr Infos
+  open-link: Link öffnen
   close: Schließen
   overview: Übersicht
   favorites: Favoriten
@@ -57,6 +58,7 @@ exhibitor-create:
   subtitle: Bitte gib alle Informationen an
   name-of-exhibitor: Name des Ausstellers
   location-of-exhibitor: Ort des Ausstellers
+  http-link: HTTP-Link (optional)
   message-offers: Folgendes bietet der Austeller an
   placeholder-type: Angebotstyp
   placeholder-offer: Angebot hinzufügen...

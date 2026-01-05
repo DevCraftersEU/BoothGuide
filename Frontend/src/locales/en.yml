@@ -3,6 +3,7 @@ general:
   save: Save
   exhibitor: Exhibitor | Exhibitors
   more-info: More Info
+  open-link: Open link
   close: Close
   overview: Overview
   favorites: Favorites
@@ -58,6 +59,7 @@ exhibitor-create:
   subtitle: Please provide all information
   name-of-exhibitor: Name of Exhibitor
   location-of-exhibitor: Location of Exhibitor
+  http-link: HTTP link (optional)
   message-offers: The exhibitor offers the following
   placeholder-type: Offer type
   placeholder-offer: Add offer...

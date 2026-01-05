@@ -24,7 +24,7 @@ public class ConversionTests {
             offers.add(offer);
         }
 
-        var dto = new ExhibitorDTO(null, "Test", offers.toArray(String[][]::new), "Room X");
+        var dto = new ExhibitorDTO(null, "Test", offers.toArray(String[][]::new), "Room X", "https://example.com/test");
         var ex = new Exhibitor(dto);
         var newDTO = new ExhibitorDTO(ex);
 
@@ -34,12 +34,12 @@ public class ConversionTests {
 
     @Test
     void testDtoConversion() {
-        var dto = new ExhibitorDTO(3L, "Example Name", new String[0][], "Roomnumber");
+        var dto = new ExhibitorDTO(3L, "Example Name", new String[0][], "Roomnumber", "https://example.com/room");
         var converted = new Exhibitor(dto);
         var revertedDTO = new ExhibitorDTO(converted);
         assertEquals(dto, revertedDTO);
 
-        var ex = new Exhibitor(17L, "Example Name", "", "Roomnumber");
+        var ex = new Exhibitor(17L, "Example Name", "", "Roomnumber", "https://example.com/room");
         var convertedDTO = new ExhibitorDTO(ex);
         var revertedEx = new Exhibitor(convertedDTO);
         assertEquals(ex, revertedEx);

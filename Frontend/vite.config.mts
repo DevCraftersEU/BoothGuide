@@ -59,7 +59,8 @@ export default defineConfig(({}) => {
         },
       }),
       VueRouter({
-        dts: 'src/typed-router.d.ts',
+          routesFolder: 'src/pages',
+        //dts: 'src/typed-router.d.ts',
       }),
       Layouts(),
       AutoImport({

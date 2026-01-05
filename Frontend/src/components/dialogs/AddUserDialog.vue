@@ -138,7 +138,10 @@ const snackbarMessage = ref('')
 const usernameField: Ref<undefined | VTextField> = ref(undefined)
 const passwordField: Ref<undefined | VTextField> = ref(undefined)
 const passwordRepeatField: Ref<undefined | VTextField> = ref(undefined)
-
+// Fix for unused eslint errors although they are declared as refs
+void usernameField
+void passwordField
+void passwordRepeatField
 </script>
 
 <template>
