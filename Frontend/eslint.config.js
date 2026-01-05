@@ -1,6 +1,8 @@
 // ~/eslint.config.js
 import pluginVue from 'eslint-plugin-vue'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import risxss from 'eslint-plugin-risxss'            // ← NEU
+
 
 export default [
   {
@@ -14,6 +16,7 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   ...vueTsEslintConfig(),
   {
+    plugins: { risxss },
     rules: {
       '@typescript-eslint/no-unused-expressions': [
         'error',

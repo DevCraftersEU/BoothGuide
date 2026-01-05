@@ -2,7 +2,7 @@
   <v-app>
     <v-fade-transition mode="out-in">
       <AppBar
-        v-if="useRoute().path != '/'"
+        v-if="route.path != '/'"
         style="z-index: 99"
       />
     </v-fade-transition>
