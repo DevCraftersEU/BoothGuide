@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <router-view />
+      <default />
     </v-main>
   </v-app>
 </template>
@@ -12,6 +12,7 @@
   import { HttpStatusCode } from 'axios'
   import { useI18n } from 'vue-i18n'
   import { useTheme } from 'vuetify'
+  import Default from "@/layouts/default.vue";
 
   const appStore = useAppStore()
   const globalTheme = useTheme()
@@ -66,12 +67,12 @@
     }
   })
 
-  globalTheme.global.name.value = appStore.design.toLowerCase()
+  globalTheme.change(appStore.design.toLowerCase())
 
   watch(appStore, () => {
     if (appStore.design.toLowerCase() !== globalTheme.global.name.value) {
       console.debug('Switching design to', appStore.design.toLowerCase())
-      globalTheme.global.name.value = appStore.design.toLowerCase()
+      globalTheme.change(appStore.design.toLowerCase())
       console.log(globalTheme.global)
     }
   })
