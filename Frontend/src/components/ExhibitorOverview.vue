@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { IExhibitor } from '@/model/models'
-import { useAppStore } from '@/stores/app'
-import { computed, Ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import {IExhibitor} from '@/model/models'
+import {useAppStore} from '@/stores/app'
+import {computed, Ref} from 'vue'
+import {useI18n} from 'vue-i18n'
+import DOMPurify from 'dompurify';
 
 const props = defineProps<{
   exhibitors: IExhibitor[]
@@ -40,11 +41,11 @@ const filteredValue = computed(() => {
   })
 })
 
-function isInFavorites (name: string): boolean {
+function isInFavorites(name: string): boolean {
   return favorites.value.find(value => value === name) !== undefined
 }
 
-function updateFavorite (name: string) {
+function updateFavorite(name: string) {
   favorites.value = appStore.changeFavorite(name)
   emit('favoriteUpdated')
 }
@@ -62,7 +63,7 @@ const offerOptions = computed(() => {
   return [...new Set(offers)].sort((a, b) => a.localeCompare(b))
 })
 
-const { t, } = useI18n()
+const {t,} = useI18n()
 </script>
 
 <template>
@@ -73,13 +74,14 @@ const { t, } = useI18n()
     >
       {{ t('exhibitor-overview.heading') }}
     </h2>
+    <!-- eslint-disable vue/no-v-html -->
     <h4
       v-if="appStore.instanceSubtitle && appStore.instanceSubtitle.trim().length > 0"
       class="mb-3"
       style="text-align: center"
-    >
-      {{ appStore.instanceSubtitle }}
-    </h4>
+      v-html="DOMPurify.sanitize(appStore.instanceSubtitle)"
+    />
+    <!--eslint-enable-->
     <v-expand-transition>
       <v-text-field
         v-if="appStore.showSearchBar"

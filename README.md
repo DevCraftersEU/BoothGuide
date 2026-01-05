@@ -52,8 +52,9 @@ and [docker compose](https://docs.docker.com/compose/) must be installed.
 4. Run `docker compose up -d`
 5. Open `http://localhost:7000` in the browser
 
-If not set in the .env file, the initial admin password is generated at first startup. Use this command to view the password for the admin user:
-`docker compose logs backend | grep "default password"`   
+If not set in the .env file, the initial admin password is generated at first startup. Use this command to view the
+password for the admin user:
+`docker compose logs backend | grep "default password"`
 
 #### Alternative: Build docker images
 
@@ -68,15 +69,15 @@ If not set in the .env file, the initial admin password is generated at first st
 
 #### Application Properties
 
-| Variable               | Required | Description                                                                         |
-|------------------------|----------|-------------------------------------------------------------------------------------|
-| `APPLICATION_NAME`     | ✅        | The name of the application, displayed in various locations.                        |
-| `APPLICATION_SUBTITLE` | ✅        | Subtitle of the application, displayed on start page below the title.               |
-| `PWA_TITLE`            | ✅        | The title of the application as displayed when installing the Progressive Web App.  |
-| `PWA_TITLE_SHORT`      | ✅        | A shorter version of the application title, used if the original title is too long. |
-| `DATASOURCE_URL`       | ✅        | The URL of the data source (e.g., PostgreSQL database) used by the application.     |
-| `DATASOURCE_USERNAME`  | ✅        | The username for accessing the database.                                            |
-| `DATASOURCE_PASSWORD`  | ✅        | The password for accessing the database.                                            |
+| Variable               | Required | Description                                                                                                     |
+|------------------------|----------|-----------------------------------------------------------------------------------------------------------------|
+| `APPLICATION_NAME`     | ✅        | The name of the application, displayed in various locations.                                                    |
+| `APPLICATION_SUBTITLE` | ✅        | Subtitle of the application, displayed on start page below the title. Supports HTML-Design-Tags (eg. \<br \/\>) |
+| `PWA_TITLE`            | ✅        | The title of the application as displayed when installing the Progressive Web App.                              |
+| `PWA_TITLE_SHORT`      | ✅        | A shorter version of the application title, used if the original title is too long.                             |
+| `DATASOURCE_URL`       | ✅        | The URL of the data source (e.g., PostgreSQL database) used by the application.                                 |
+| `DATASOURCE_USERNAME`  | ✅        | The username for accessing the database.                                                                        |
+| `DATASOURCE_PASSWORD`  | ✅        | The password for accessing the database.                                                                        |
 
 #### Configuration Properties
 
