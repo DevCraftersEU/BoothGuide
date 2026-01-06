@@ -60,10 +60,10 @@ const showFooterImage = ref(true)
 const display = useDisplay()
 const route = useRoute()
 
-const imagePath = ref('/api/footerImage?deviceSize=' + display.name.value)
+const imagePath = ref('/pub/footerImage?deviceSize=' + display.name.value)
 
 watch(display.name, (value) => {
-  imagePath.value = '/api/footerImage?deviceSize=' + value
+  imagePath.value = '/pub/footerImage?deviceSize=' + value
   showFooterImage.value = true
 })
 </script>
