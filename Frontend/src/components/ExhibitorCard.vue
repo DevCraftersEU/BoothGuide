@@ -15,7 +15,7 @@ const {t} = useI18n()
     class="ma-2"
   >
     <v-card-title>
-      <div style="display: flex; align-items: center">
+      <div style="display: flex; align-items: start; justify-content: space-between; text-wrap: auto">
         {{ exhibitor.name }}
         <a
           v-if="exhibitor.httpLink && exhibitor.httpLink.trim().length > 0"
@@ -26,9 +26,10 @@ const {t} = useI18n()
           :title="t('general.open-link')"
           style="font-size: smaller; text-decoration: none"
         >
-          | <v-icon
+          <v-icon
+            class="pt-3 pr-2"
             icon="mdi-open-in-new"
-            size="x-small"
+            size="small"
           />
         </a>
       </div>
@@ -41,21 +42,22 @@ const {t} = useI18n()
     </v-card-title>
     <v-card-subtitle>
       <div
-        style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; row-gap: 0.5em"
+        style="display: flex; justify-content: space-between; align-items: center; row-gap: 0.5em"
       >
-        <div style="display: flex; flex-wrap: wrap; row-gap: 0.5em; justify-content: space-around">
-          <div
-            v-if="exhibitor.offers.length>0 && exhibitor.offers[0].length > 0 && exhibitor.offers[0][0]!.length > 0"
-          >
-            <v-chip
-              v-for="(offer, offerIndex) in exhibitor.offers"
-              :key="offerIndex"
-              class="mr-2"
-              color="on-surface"
-              density="compact"
-              :text="offer[0]"
-            />
-          </div>
+        <div
+          v-if="exhibitor.offers.length>0 && exhibitor.offers[0].length > 0 && exhibitor.offers[0][0]!.length > 0"
+          style="display: flex; row-gap: 0.5em; overflow-x: auto;  justify-content: space-around; max-width: 100%; -webkit-overflow-scrolling: touch;"
+          class="hide-scrollbar"
+        >
+          <v-chip
+            v-for="(offer, offerIndex) in exhibitor.offers"
+            :key="offerIndex"
+            class="mr-2"
+            color="on-surface"
+            density="compact"
+            :text="offer[0]"
+            style="flex: 0 0 auto"
+          />
         </div>
       </div>
     </v-card-subtitle>
@@ -76,5 +78,13 @@ const {t} = useI18n()
 </template>
 
 <style scoped>
+/* Chrome, Edge, Safari */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+/* Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
 </style>
