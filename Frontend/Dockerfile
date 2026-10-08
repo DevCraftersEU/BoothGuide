@@ -1,19 +1,19 @@
-FROM node:latest AS build-stage
+FROM node:22.23.3-alpine3.24 AS build-stage
+
 WORKDIR /app
-RUN npm install -g pnpm
+RUN corepack enable && corepack prepare pnpm@10.27.0 --activate
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY . .
-RUN pnpm install
 RUN pnpm run build
-RUN ls -lah
-FROM nginx:stable-alpine AS production-stage
-# Copy the build application from the previous stage to the Nginx container
+
+FROM nginx:1.30.5-alpine3.24 AS production-stage
+
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-# Copy the nginx configuration file
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-# Expose the port
-EXPOSE 3000
-# Allowing PWA to set title dynamically
 COPY ./nginx/substitute_environment_variables_in_manifest.sh /docker-entrypoint.d/substitute_environment_variables_in_manifest.sh
 RUN chmod +x /docker-entrypoint.d/substitute_environment_variables_in_manifest.sh
-# Start Nginx to serve the application
+
+EXPOSE 3000
+
 CMD ["nginx", "-g", "daemon off;"]

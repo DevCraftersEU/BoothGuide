@@ -1,34 +1,33 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Build Frontend
 
-on: ["push"]
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    strategy:
-      matrix:
-        node-version: [22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-    - uses: actions/checkout@v4
-    - name: Install pnpm
-      uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda
-      with:
-        version: 10
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        cache-dependency-path: Frontend/pnpm-lock.yaml
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - name: Install dependencies
-      working-directory: ./Frontend
-      run: pnpm install
-    - name: Build
-      working-directory: ./Frontend
-      run: pnpm run build
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda
+        with:
+          version: 10.27.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache-dependency-path: Frontend/pnpm-lock.yaml
+          cache: pnpm
+      - name: Install dependencies
+        working-directory: ./Frontend
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        working-directory: ./Frontend
+        run: pnpm run lint
+      - name: Build
+        working-directory: ./Frontend
+        run: pnpm run build

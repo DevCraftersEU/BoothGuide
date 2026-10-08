@@ -2,7 +2,7 @@ services:
   webserver:
     build:
       context: .
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
     links:
       - frontend
       - backend
@@ -12,12 +12,12 @@ services:
     env_file: .env
     build:
       context: Frontend
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
   backend:
     env_file: .env
     build:
       context: Backend
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
     links:
       - db
 # You only need to mount the images if you want to use the
