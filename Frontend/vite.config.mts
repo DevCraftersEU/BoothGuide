@@ -1,14 +1,10 @@
 // Plugins
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import Fonts from 'unplugin-fonts/vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import Layouts from 'vite-plugin-vue-layouts'
 import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { resolve, dirname } from 'node:path'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -62,7 +58,6 @@ export default defineConfig(({}) => {
           routesFolder: 'src/pages',
         //dts: 'src/typed-router.d.ts',
       }),
-      Layouts(),
       AutoImport({
         imports: [
           'vue',
@@ -87,17 +82,6 @@ export default defineConfig(({}) => {
         autoImport: true,
         styles: {
           configFile: 'src/styles/settings.scss',
-        },
-      }),
-      VueI18nPlugin({
-        include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/*.yml'),
-      }),
-      Fonts({
-        google: {
-          families: [{
-            name: 'Roboto',
-            styles: 'wght@100;300;400;500;700;900',
-          }],
         },
       }),
     ],

@@ -6,8 +6,6 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-//Broken after upgrade -> Maybe fix setupLayouts(routes) as routes and setting <router-view /> instead of <default /> in index.ts
-//import { setupLayouts } from 'virtual:generated-layouts'
 import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({

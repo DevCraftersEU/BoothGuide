@@ -1,5 +1,8 @@
 import { createI18n } from 'vue-i18n'
-import messages from '@intlify/unplugin-vue-i18n/messages'
+import de from '@/locales/de.json'
+import en from '@/locales/en.json'
+
+const messages = { de, en }
 
 export default createI18n({
   legacy: false,
