@@ -5,17 +5,22 @@ backend, frontend, Git tags, GitHub releases, and published container images.
 
 ## One-time repository setup
 
-Create a fine-grained token for a dedicated bot or service account and store it
-as the repository Actions secret `RELEASE_PLEASE_TOKEN`. The token needs access
-to this repository and these repository permissions:
+Create a GitHub App owned by the organization, for example `boothguide-release`,
+and install it only on this repository. Grant the app these repository
+permissions:
 
 - Contents: read and write
 - Issues: read and write
 - Pull requests: read and write
 
-Do not use a maintainer's personal token. A separate token is required because
-events created with the built-in `GITHUB_TOKEN` do not start pull-request or
-release workflows.
+Store its numeric App ID as the Actions repository variable
+`RELEASE_BOT_APP_ID`. Generate a private key for the app and store the complete
+PEM contents as the Actions repository secret `RELEASE_BOT_PRIVATE_KEY`.
+
+The workflow exchanges these credentials for a short-lived installation token.
+Do not use a maintainer's personal token. A separate app token is required
+because events created with the built-in `GITHUB_TOKEN` do not start
+pull-request or release workflows.
 
 If CLA Assistant does not automatically exempt bot accounts, add the release
 bot to its allowlist.
