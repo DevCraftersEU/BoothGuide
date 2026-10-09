@@ -35,7 +35,7 @@ jobs:
           distribution: temurin
           cache: maven
       - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@49866fead7de0b0083b89f5f653f9620548ccddf
+        uses: advanced-security/maven-dependency-submission-action@a64327a7329c9939cf675e458452febe1894a70c
         with:
           directory: Backend
           ignore-maven-wrapper: true
