@@ -25,9 +25,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Properties;
 
 @Service
@@ -35,16 +33,16 @@ public class ValidationServiceImpl implements ValidationService {
 
     private static final Logger logger = LoggerFactory.getLogger(ValidationServiceImpl.class);
 
-    private final URL resource = this.getClass().getClassLoader().getResource("password-rules-messages.properties");
-
     private MessageResolver messageResolver;
 
     @PostConstruct
     public void init() {
-        try {
+        try (var resource = getClass().getClassLoader().getResourceAsStream("password-rules-messages.properties")) {
+            if (resource == null) {
+                throw new IOException("password-rules-messages.properties not found on the classpath");
+            }
             Properties props = new Properties();
-            assert resource != null;
-            props.load(new FileInputStream(resource.getPath()));
+            props.load(resource);
             messageResolver = new PropertiesMessageResolver(props);
         } catch (IOException e) {
             logger.error(e.getMessage());
