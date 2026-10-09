@@ -1,0 +1,105 @@
+version: 2
+
+updates:
+  - package-ecosystem: maven
+    directory: /Backend
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: fix
+      prefix-development: fix
+      include: scope
+    groups:
+      maven-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      maven-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: npm
+    directory: /Frontend
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:15"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: fix
+      prefix-development: fix
+      include: scope
+    groups:
+      frontend-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      frontend-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:30"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: fix
+      prefix-development: fix
+      include: scope
+    groups:
+      actions-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      actions-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: docker
+    directories:
+      - /
+      - /Backend
+      - /Frontend
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:45"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: fix
+      prefix-development: fix
+      include: scope
+    groups:
+      docker-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      docker-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
