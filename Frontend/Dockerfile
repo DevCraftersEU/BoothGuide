@@ -7,7 +7,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-FROM nginx:1.30.5-alpine3.24 AS production-stage
+FROM nginx:1.31-alpine3.24 AS production-stage
 
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
