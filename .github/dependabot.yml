@@ -13,6 +13,15 @@ updates:
       prefix: fix
       prefix-development: fix
       include: scope
+    # Major framework upgrades require a dedicated migration PR.
+    # Security updates remain eligible for Dependabot alerts and PRs.
+    ignore:
+      - dependency-name: org.springframework.boot:spring-boot-starter-parent
+        update-types:
+          - version-update:semver-major
+      - dependency-name: org.springdoc:springdoc-openapi-starter-webmvc-ui
+        update-types:
+          - version-update:semver-major
     groups:
       maven-security:
         applies-to: security-updates
@@ -38,6 +47,12 @@ updates:
       prefix: fix
       prefix-development: fix
       include: scope
+    # v21 currently requires a dedicated compatibility migration.
+    # Keep receiving minor, patch, and security updates for v20.
+    ignore:
+      - dependency-name: unplugin-auto-import
+        update-types:
+          - version-update:semver-major
     groups:
       frontend-security:
         applies-to: security-updates
