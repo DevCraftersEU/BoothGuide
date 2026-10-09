@@ -36,6 +36,9 @@
 
     <properties>
         <java.version>21</java.version>
+        <!-- Temporary security overrides until Spring Boot manages these patched releases. -->
+        <tomcat.version>11.0.25</tomcat.version>
+        <jackson-bom.version>3.1.7</jackson-bom.version>
         <!-- Springdoc still uses Jackson 2; keep its compatibility BOM on the patched release. -->
         <jackson-2-bom.version>2.21.7</jackson-2-bom.version>
     </properties>
