@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.regex.Pattern;
 
@@ -15,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ActiveProfiles("test-with-default-design")
+@TestPropertySource(properties = "spring.datasource.url=jdbc:h2:mem:testdb-default-design")
 public class DefaultDesignControllerTest extends AbstractRestTest {
 
     private static final String REGEX_HEX = "^#(?:[0-9a-fA-F]{3}){1,2}$";

@@ -1,32 +1,31 @@
-# Test if the current master is buildable to prepare for releases
 name: Build Docker Images
 
 on:
   push:
-    branches: [ "main" ]
-    
+    branches: [main, dev]
+  pull_request:
+
 permissions:
   contents: read
-  
+
 jobs:
-  build-frontend:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: frontend
+            context: ./Frontend
+          - name: backend
+            context: ./Backend
+          - name: webserver
+            context: .
     steps:
-    - uses: actions/checkout@v4
-    - name: Build Frontend Docker image
-      working-directory: ./Frontend
-      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)
-  build-backend:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build Backend Docker image
-      working-directory: ./Backend
-      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)
-  build-webserver:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build Backend Docker image
-      working-directory: ./Backend
-      run: docker build . --file Dockerfile --tag booth-guide-fronted:$(date +%s)
+      - uses: actions/checkout@v4
+      - name: Build ${{ matrix.name }} image
+        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
+        with:
+          context: ${{ matrix.context }}
+          file: ${{ matrix.context }}/Dockerfile
+          push: false
