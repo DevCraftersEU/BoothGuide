@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.4](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.3...v0.2.4) (2026-10-09)
+
+
+### Bug Fixes
+
+* **deps:** migrate backend to Spring Boot 4 ([#40](https://github.com/DevCraftersEU/BoothGuide/issues/40)) ([91c4518](https://github.com/DevCraftersEU/BoothGuide/commit/91c4518dee3bb6b71c95fe3837515a4e8f40f156))
+* **deps:** patch Tomcat and Jackson vulnerabilities ([#42](https://github.com/DevCraftersEU/BoothGuide/issues/42)) ([a95ab16](https://github.com/DevCraftersEU/BoothGuide/commit/a95ab16acd71d0eb58163266ca0f526030d163d7))
+
 ## [0.2.3](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.2...v0.2.3) (2026-10-09)
 
 
