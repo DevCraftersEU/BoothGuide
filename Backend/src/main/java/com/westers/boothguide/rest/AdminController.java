@@ -11,7 +11,10 @@ public class AdminController {
 
     @GetMapping("/auth/checkAuth")
     public ResponseEntity<String[]> checkAuth(Authentication authentication) {
-        return ResponseEntity.ok(authentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList().toArray(new String[0]));
+        return ResponseEntity.ok(authentication.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .filter(authority -> authority.startsWith("ROLE_"))
+                .toArray(String[]::new));
     }
 
 

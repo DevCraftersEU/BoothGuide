@@ -21,7 +21,7 @@ import java.util.Objects;
 public class SetupController {
     private final static Logger logger = LoggerFactory.getLogger(SetupController.class);
 
-    @Value("${admin.username}")
+    @Value("${admin.username:}")
     private String username;
     @Value("${admin.password:}")
     private String password;
