@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "170042398cfc4f83c030f2a606a2768814811b55",
+  "include-v-in-tag": true,
+  "include-component-in-tag": false,
+  "pull-request-title-pattern": "chore${scope}: release ${version}",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "booth-guide",
+      "version-file": "version.txt",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "Frontend/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "xml",
+          "path": "Backend/pom.xml",
+          "xpath": "/*[local-name()='project']/*[local-name()='version']"
+        }
+      ]
+    }
+  }
+}
