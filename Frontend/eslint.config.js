@@ -1,7 +1,7 @@
 // ~/eslint.config.js
 import pluginVue from 'eslint-plugin-vue'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
-import risxss from 'eslint-plugin-risxss'            // ← NEU
+import risxss from 'eslint-plugin-risxss'
+import tseslint from 'typescript-eslint'
 
 
 export default [
@@ -13,8 +13,16 @@ export default [
     name: 'app/files-to-ignore',
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
+  ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
-  ...vueTsEslintConfig(),
+  {
+    files: ['**/*.vue'],
+    languageOptions: {
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+  },
   {
     plugins: { risxss },
     rules: {
