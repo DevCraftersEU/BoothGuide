@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.6](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.5...v0.2.6) (2026-10-10)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump org.owasp:dependency-check-maven in /Backend ([#36](https://github.com/DevCraftersEU/BoothGuide/issues/36)) ([8552000](https://github.com/DevCraftersEU/BoothGuide/commit/85520005495998979d40ad23572c50e105435234))
+* **deps:** bump actions/checkout from 4 to 7 ([#37](https://github.com/DevCraftersEU/BoothGuide/issues/37)) ([5637843](https://github.com/DevCraftersEU/BoothGuide/commit/5637843219701a418a81f952fcb58f4dc3b0b2d4))
+* **deps:** bump docker/build-push-action ([#38](https://github.com/DevCraftersEU/BoothGuide/issues/38)) ([a09d109](https://github.com/DevCraftersEU/BoothGuide/commit/a09d109fdf0a1b055574163859eddf31f96a234f))
+* **deps:** bump docker/metadata-action ([#39](https://github.com/DevCraftersEU/BoothGuide/issues/39)) ([538a8d8](https://github.com/DevCraftersEU/BoothGuide/commit/538a8d828c94b53e5fd082fdd0a1694e7cde8ef0))
+
 ## [0.2.5](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.4...v0.2.5) (2026-10-10)
 
 
