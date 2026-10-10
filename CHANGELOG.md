@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.6...v0.2.7) (2026-10-10)
+
+
+### Bug Fixes
+
+* use default design enable flag ([#46](https://github.com/DevCraftersEU/BoothGuide/issues/46)) ([d054dfc](https://github.com/DevCraftersEU/BoothGuide/commit/d054dfc06f5d92e4eff6cfdbb8940aa79aa483d7))
+
 ## [0.2.6](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.5...v0.2.6) (2026-10-10)
 
 
