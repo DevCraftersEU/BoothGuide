@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.4...v0.2.5) (2026-10-10)
+
+
+### Bug Fixes
+
+* **deps:** eliminate frontend security alerts ([#43](https://github.com/DevCraftersEU/BoothGuide/issues/43)) ([f6748bc](https://github.com/DevCraftersEU/BoothGuide/commit/f6748bca211e42153c90db4cb9f6a8e241a33ce9))
+
 ## [0.2.4](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.3...v0.2.4) (2026-10-09)
 
 
