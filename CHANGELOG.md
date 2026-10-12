@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.8](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.7...v0.2.8) (2026-10-12)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump sass-embedded ([#48](https://github.com/DevCraftersEU/BoothGuide/issues/48)) ([6cccc27](https://github.com/DevCraftersEU/BoothGuide/commit/6cccc27d365a15c73814be7e80f9a38255eb9416))
+* **deps:** bump actions/setup-node from 6 to 7 ([#51](https://github.com/DevCraftersEU/BoothGuide/issues/51)) ([2203817](https://github.com/DevCraftersEU/BoothGuide/commit/220381763b124f1efea007a6b6f0b85042501fe0))
+* **deps:** bump pnpm/action-setup from 4.1.0 to 6.1.0 ([#53](https://github.com/DevCraftersEU/BoothGuide/issues/53)) ([0647a09](https://github.com/DevCraftersEU/BoothGuide/commit/0647a09bfaeac41e7ad9e79c3848f838f62e3d90))
+
 ## [0.2.7](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.6...v0.2.7) (2026-10-10)
 
 
