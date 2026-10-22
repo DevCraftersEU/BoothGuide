@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.9](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.8...v0.2.9) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump eslint from 9.39.5 to 10.13.0 in /Frontend ([#58](https://github.com/DevCraftersEU/BoothGuide/issues/58)) ([4201896](https://github.com/DevCraftersEU/BoothGuide/commit/4201896f701ceb5fbf3c6c4d4c07fcfcabd4cd3e))
+* **deps-dev:** bump org.codehaus.mojo:versions-maven-plugin ([#56](https://github.com/DevCraftersEU/BoothGuide/issues/56)) ([31700a0](https://github.com/DevCraftersEU/BoothGuide/commit/31700a052ea841590c51616459533459878af9ef))
+* **deps:** align frontend on Node.js 24 LTS ([#66](https://github.com/DevCraftersEU/BoothGuide/issues/66)) ([2e92031](https://github.com/DevCraftersEU/BoothGuide/commit/2e9203190c8f26b6a1cad6651a3a97018ed64454))
+* **deps:** bump actions/create-github-app-token ([#60](https://github.com/DevCraftersEU/BoothGuide/issues/60)) ([49958da](https://github.com/DevCraftersEU/BoothGuide/commit/49958da8234e95d69b06b2958d01e538bf64c70b))
+* **deps:** bump actions/setup-java from 4 to 6 ([#62](https://github.com/DevCraftersEU/BoothGuide/issues/62)) ([f2907e9](https://github.com/DevCraftersEU/BoothGuide/commit/f2907e941b92b34627f4a81ea7654925f47a6837))
+* **deps:** bump the frontend-minor-and-patch group ([#57](https://github.com/DevCraftersEU/BoothGuide/issues/57)) ([fec59b5](https://github.com/DevCraftersEU/BoothGuide/commit/fec59b5239fd3512ee3b9f4c4b58246172e4049c))
+* **deps:** pin docker login action v4.6.0 ([#65](https://github.com/DevCraftersEU/BoothGuide/issues/65)) ([06fa711](https://github.com/DevCraftersEU/BoothGuide/commit/06fa711e97a4e80f609a481e74df0377a5376e23))
+
 ## [0.2.8](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.7...v0.2.8) (2026-10-12)
 
 
