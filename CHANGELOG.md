@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.10](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.9...v0.2.10) (2026-10-26)
+
+
+### Bug Fixes
+
+* **deps:** bump docker/login-action from 4.6.0 to 4.7.0 ([#71](https://github.com/DevCraftersEU/BoothGuide/issues/71)) ([2da9d74](https://github.com/DevCraftersEU/BoothGuide/commit/2da9d7436ce823b70fd52b1f6626d8ab2ae5d572))
+* **deps:** bump the frontend-minor-and-patch group with 6 updates ([#68](https://github.com/DevCraftersEU/BoothGuide/issues/68)) ([7189e4c](https://github.com/DevCraftersEU/BoothGuide/commit/7189e4cf0e7399632b1962ea0b151947ee4efcd3))
+* **deps:** bump the maven-minor-and-patch group with 2 updates ([#67](https://github.com/DevCraftersEU/BoothGuide/issues/67)) ([f4bfe93](https://github.com/DevCraftersEU/BoothGuide/commit/f4bfe93d4f0f549eb9828fbe6d6d8d9d82a50319))
+* **deps:** upgrade VueUse to v15 ([#73](https://github.com/DevCraftersEU/BoothGuide/issues/73)) ([0360709](https://github.com/DevCraftersEU/BoothGuide/commit/0360709817161ae23be8ffd5119c48691848d0ba))
+
 ## [0.2.9](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.8...v0.2.9) (2026-10-22)
 
 
