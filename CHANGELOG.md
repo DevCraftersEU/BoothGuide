@@ -5,14 +5,10 @@
 
 ### Bug Fixes
 
-* **deps:** bump docker/login-action ([25e65f1](https://github.com/DevCraftersEU/BoothGuide/commit/25e65f1d58a4621fe2419d71c188cccdd8f04b8a))
-* **deps:** bump docker/login-action from 4.6.0 to 4.7.0 in the actions-minor-and-patch group ([2da9d74](https://github.com/DevCraftersEU/BoothGuide/commit/2da9d7436ce823b70fd52b1f6626d8ab2ae5d572))
-* **deps:** bump the frontend-minor-and-patch group ([ad53bd6](https://github.com/DevCraftersEU/BoothGuide/commit/ad53bd690c138eef90f5b3da356b94461a5bb8dc))
-* **deps:** bump the frontend-minor-and-patch group in /Frontend with 6 updates ([7189e4c](https://github.com/DevCraftersEU/BoothGuide/commit/7189e4cf0e7399632b1962ea0b151947ee4efcd3))
-* **deps:** bump the maven-minor-and-patch group ([8763d97](https://github.com/DevCraftersEU/BoothGuide/commit/8763d978ea37037d59d6bec3ce30d2e47a15325a))
-* **deps:** bump the maven-minor-and-patch group in /Backend with 2 updates ([f4bfe93](https://github.com/DevCraftersEU/BoothGuide/commit/f4bfe93d4f0f549eb9828fbe6d6d8d9d82a50319))
-* **deps:** upgrade VueUse to v15 ([0360709](https://github.com/DevCraftersEU/BoothGuide/commit/0360709817161ae23be8ffd5119c48691848d0ba))
-* **deps:** upgrade VueUse to v15 ([006b4d7](https://github.com/DevCraftersEU/BoothGuide/commit/006b4d7c3f703089ae7e5bcee1c0a211363087bf))
+* **deps:** bump docker/login-action from 4.6.0 to 4.7.0 ([#71](https://github.com/DevCraftersEU/BoothGuide/issues/71)) ([2da9d74](https://github.com/DevCraftersEU/BoothGuide/commit/2da9d7436ce823b70fd52b1f6626d8ab2ae5d572))
+* **deps:** bump the frontend-minor-and-patch group with 6 updates ([#68](https://github.com/DevCraftersEU/BoothGuide/issues/68)) ([7189e4c](https://github.com/DevCraftersEU/BoothGuide/commit/7189e4cf0e7399632b1962ea0b151947ee4efcd3))
+* **deps:** bump the maven-minor-and-patch group with 2 updates ([#67](https://github.com/DevCraftersEU/BoothGuide/issues/67)) ([f4bfe93](https://github.com/DevCraftersEU/BoothGuide/commit/f4bfe93d4f0f549eb9828fbe6d6d8d9d82a50319))
+* **deps:** upgrade VueUse to v15 ([#73](https://github.com/DevCraftersEU/BoothGuide/issues/73)) ([0360709](https://github.com/DevCraftersEU/BoothGuide/commit/0360709817161ae23be8ffd5119c48691848d0ba))
 
 ## [0.2.9](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.8...v0.2.9) (2026-10-22)
 
