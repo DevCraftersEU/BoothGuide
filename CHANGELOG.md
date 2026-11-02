@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.11](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.10...v0.2.11) (2026-11-02)
+
+
+### Bug Fixes
+
+* **deps:** bump Springdoc from 3.1.1 to 3.2.0 ([#74](https://github.com/DevCraftersEU/BoothGuide/issues/74)) ([40d8ae5](https://github.com/DevCraftersEU/BoothGuide/commit/40d8ae5d432d4de69268c0d897066bc0a459e1bd))
+* **deps:** bump the frontend minor-and-patch group with 5 updates ([#75](https://github.com/DevCraftersEU/BoothGuide/issues/75)) ([b1df022](https://github.com/DevCraftersEU/BoothGuide/commit/b1df0227470b45fa7d11d4dc135b6e0b7fa1a062))
+* **deps:** bump Node.js from 24.22.1 to 24.22.2 ([#76](https://github.com/DevCraftersEU/BoothGuide/issues/76)) ([38e60e7](https://github.com/DevCraftersEU/BoothGuide/commit/38e60e75f83576db622a6e7dda4795bd55eb61ed))
+* **deps:** patch transitive frontend vulnerabilities ([#79](https://github.com/DevCraftersEU/BoothGuide/issues/79)) ([eb1ac80](https://github.com/DevCraftersEU/BoothGuide/commit/eb1ac8075b434bde7fdffd4e497e3d341f04c3f7))
+
 ## [0.2.10](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.9...v0.2.10) (2026-10-26)
 
 
