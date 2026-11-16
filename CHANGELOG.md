@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.12](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.11...v0.2.12) (2026-11-16)
+
+
+### Bug Fixes
+
+* **deps:** bump docker/metadata-action ([d3e4631](https://github.com/DevCraftersEU/BoothGuide/commit/d3e4631f6ad406a6f3e88af78d203ca2d27181b8))
+* **deps:** bump docker/metadata-action from 8e671d84a3bd81afdfc4fdbb96a42b07c2a80934 to 1ec73021df0717d8bef7700a897c064453280439 ([fa216cf](https://github.com/DevCraftersEU/BoothGuide/commit/fa216cf5423b976a4688bf5dfa3864f5cc2be76a))
+* **deps:** bump node ([e7bd98c](https://github.com/DevCraftersEU/BoothGuide/commit/e7bd98cae888610459cd967634645df98adeea84))
+* **deps:** bump node from 24.22.2-alpine3.24 to 24.22.3-alpine3.24 in /Frontend in the docker-minor-and-patch group across 1 directory ([e1d041a](https://github.com/DevCraftersEU/BoothGuide/commit/e1d041a14676fdb227477f404fad812b5d44cafe))
+* **deps:** bump the actions-minor-and-patch group with 2 updates ([f15cfa6](https://github.com/DevCraftersEU/BoothGuide/commit/f15cfa64aaec9ca18a3a5f7e65324ee1eed360f6))
+* **deps:** bump the actions-minor-and-patch group with 2 updates ([4ae03c4](https://github.com/DevCraftersEU/BoothGuide/commit/4ae03c49891833c5a6c9081af3627d328378a772))
+* **deps:** bump the frontend-minor-and-patch group across 1 directory with 9 updates ([3b58fe7](https://github.com/DevCraftersEU/BoothGuide/commit/3b58fe73e5d88f26072e386dbf2089fe424d6417))
+* **deps:** bump the frontend-minor-and-patch group across 1 directory with 9 updates ([05b66ec](https://github.com/DevCraftersEU/BoothGuide/commit/05b66ec1a4386a3672a6fec9ed24062521ccc839))
+* **deps:** bump the maven-minor-and-patch group ([aca8483](https://github.com/DevCraftersEU/BoothGuide/commit/aca84832ca4dd2a33c1cb87099fcdc234ee1fd04))
+* **deps:** bump the maven-minor-and-patch group in /Backend with 3 updates ([8cde0c1](https://github.com/DevCraftersEU/BoothGuide/commit/8cde0c145c57fc81ef074be8ef778b41f1384a26))
+
 ## [0.2.11](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.10...v0.2.11) (2026-11-02)
 
 
