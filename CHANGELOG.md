@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.12](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.11...v0.2.12) (2026-11-16)
+
+
+### Bug Fixes
+
+* **deps:** bump the GitHub Actions minor-and-patch group with 2 updates ([#83](https://github.com/DevCraftersEU/BoothGuide/issues/83)) ([f15cfa6](https://github.com/DevCraftersEU/BoothGuide/commit/f15cfa64aaec9ca18a3a5f7e65324ee1eed360f6))
+* **deps:** update docker/metadata-action ([#84](https://github.com/DevCraftersEU/BoothGuide/issues/84)) ([fa216cf](https://github.com/DevCraftersEU/BoothGuide/commit/fa216cf5423b976a4688bf5dfa3864f5cc2be76a))
+* **deps:** bump the backend Maven minor-and-patch group with 3 updates ([#85](https://github.com/DevCraftersEU/BoothGuide/issues/85)) ([8cde0c1](https://github.com/DevCraftersEU/BoothGuide/commit/8cde0c145c57fc81ef074be8ef778b41f1384a26))
+* **deps:** bump the frontend minor-and-patch group with 9 updates ([#86](https://github.com/DevCraftersEU/BoothGuide/issues/86)) ([3b58fe7](https://github.com/DevCraftersEU/BoothGuide/commit/3b58fe73e5d88f26072e386dbf2089fe424d6417))
+* **deps:** bump Node.js from 24.22.2 to 24.22.3 ([#87](https://github.com/DevCraftersEU/BoothGuide/issues/87)) ([e1d041a](https://github.com/DevCraftersEU/BoothGuide/commit/e1d041a14676fdb227477f404fad812b5d44cafe))
+
 ## [0.2.11](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.10...v0.2.11) (2026-11-02)
 
 
