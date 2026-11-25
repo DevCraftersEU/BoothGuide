@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.13](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.12...v0.2.13) (2026-11-25)
+
+
+### Bug Fixes
+
+* **deps:** bump the backend Maven minor-and-patch group with 4 updates ([#89](https://github.com/DevCraftersEU/BoothGuide/issues/89)) ([7980e10](https://github.com/DevCraftersEU/BoothGuide/commit/7980e10b7ebbd3040ac302f86982f9e4fd05272a))
+* **deps:** bump the frontend minor-and-patch group with 5 updates ([#90](https://github.com/DevCraftersEU/BoothGuide/issues/90)) ([f13a913](https://github.com/DevCraftersEU/BoothGuide/commit/f13a913a2fe9a97b74c536ec0741532cbc5463c2))
+* **deps:** bump actions/create-github-app-token from 3.3.0 to 3.4.0 ([#92](https://github.com/DevCraftersEU/BoothGuide/issues/92)) ([7a4bd99](https://github.com/DevCraftersEU/BoothGuide/commit/7a4bd99e7d687d3c087b2089e89f12016f53f0aa))
+* **deps:** bump vue-router from 4.6.4 to 4.6.5 ([#94](https://github.com/DevCraftersEU/BoothGuide/issues/94)) ([5805ea6](https://github.com/DevCraftersEU/BoothGuide/commit/5805ea6f397ae7d0003bc0dbedbfd00a4a272f73))
+
 ## [0.2.12](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.11...v0.2.12) (2026-11-16)
 
 
