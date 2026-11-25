@@ -5,14 +5,10 @@
 
 ### Bug Fixes
 
-* **deps:** bump actions/create-github-app-token ([9e077c2](https://github.com/DevCraftersEU/BoothGuide/commit/9e077c2f0ad06a2a9c261aa45db950455fad27e1))
-* **deps:** bump actions/create-github-app-token from 3.3.0 to 3.4.0 in the actions-minor-and-patch group ([7a4bd99](https://github.com/DevCraftersEU/BoothGuide/commit/7a4bd99e7d687d3c087b2089e89f12016f53f0aa))
-* **deps:** bump the frontend-minor-and-patch group ([79ea42d](https://github.com/DevCraftersEU/BoothGuide/commit/79ea42d68337ae19f05adf1cf219e5b862578db7))
-* **deps:** bump the frontend-minor-and-patch group in /Frontend with 5 updates ([f13a913](https://github.com/DevCraftersEU/BoothGuide/commit/f13a913a2fe9a97b74c536ec0741532cbc5463c2))
-* **deps:** bump the maven-minor-and-patch group ([bc2e3fb](https://github.com/DevCraftersEU/BoothGuide/commit/bc2e3fb09ee141556ff246d217215f332dd6ed12))
-* **deps:** bump the maven-minor-and-patch group in /Backend with 4 updates ([7980e10](https://github.com/DevCraftersEU/BoothGuide/commit/7980e10b7ebbd3040ac302f86982f9e4fd05272a))
-* **deps:** bump vue-router to 4.6.5 ([5805ea6](https://github.com/DevCraftersEU/BoothGuide/commit/5805ea6f397ae7d0003bc0dbedbfd00a4a272f73))
-* **deps:** bump vue-router to 4.6.5 ([e50f9c5](https://github.com/DevCraftersEU/BoothGuide/commit/e50f9c58cc134613d554b711b8e85b0afab58fb6))
+* **deps:** bump the backend Maven minor-and-patch group with 4 updates ([#89](https://github.com/DevCraftersEU/BoothGuide/issues/89)) ([7980e10](https://github.com/DevCraftersEU/BoothGuide/commit/7980e10b7ebbd3040ac302f86982f9e4fd05272a))
+* **deps:** bump the frontend minor-and-patch group with 5 updates ([#90](https://github.com/DevCraftersEU/BoothGuide/issues/90)) ([f13a913](https://github.com/DevCraftersEU/BoothGuide/commit/f13a913a2fe9a97b74c536ec0741532cbc5463c2))
+* **deps:** bump actions/create-github-app-token from 3.3.0 to 3.4.0 ([#92](https://github.com/DevCraftersEU/BoothGuide/issues/92)) ([7a4bd99](https://github.com/DevCraftersEU/BoothGuide/commit/7a4bd99e7d687d3c087b2089e89f12016f53f0aa))
+* **deps:** bump vue-router from 4.6.4 to 4.6.5 ([#94](https://github.com/DevCraftersEU/BoothGuide/issues/94)) ([5805ea6](https://github.com/DevCraftersEU/BoothGuide/commit/5805ea6f397ae7d0003bc0dbedbfd00a4a272f73))
 
 ## [0.2.12](https://github.com/DevCraftersEU/BoothGuide/compare/v0.2.11...v0.2.12) (2026-11-16)
 
